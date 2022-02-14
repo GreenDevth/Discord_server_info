@@ -13,13 +13,13 @@ token = get_token(6)
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user.name} (ID : {bot.user.id})')
-    members = 0
-    for guild in bot.guilds:
-        members += guild.member_count - 1
-    await bot.change_presence(
-        status=discord.Status.online,
-        activity=discord.Activity(type=discord.ActivityType.watching, name=f'ผู้ใช้งาน {members} คน')
-    )
+    # members = 0
+    # for guild in bot.guilds:
+    #     members += guild.member_count - 1
+    # await bot.change_presence(
+    #     status=discord.Status.online,
+    #     activity=discord.Activity(type=discord.ActivityType.watching, name=f'ผู้ใช้งาน {members} คน')
+    # )
 
 
 config_cogs(bot)
